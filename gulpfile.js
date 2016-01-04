@@ -6,9 +6,6 @@ gulp.task('build-ES6', () => {
         .pipe(babel({
             presets: ['es2015'],
         }))
-        .pipe(babel({
-            plugins: ["transform-runtime"]
-        }))
         .pipe(gulp.dest('dist'));
 });
 

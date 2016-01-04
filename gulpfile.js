@@ -4,7 +4,10 @@ const babel = require('gulp-babel');
 gulp.task('build-ES6', () => {
     return gulp.src('src/*.js')
         .pipe(babel({
-            presets: ['es2015']
+            presets: ['es2015'],
+        }))
+        .pipe(babel({
+            plugins: ["transform-runtime"]
         }))
         .pipe(gulp.dest('dist'));
 });
